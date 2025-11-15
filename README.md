@@ -1,3 +1,7 @@
+# chefdev
+A sophisticated web application that helps users manage recipes, plan meals intelligently, optimize shopping lists, and coordinate cooking multiple dishes with perfect timing.
+
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
