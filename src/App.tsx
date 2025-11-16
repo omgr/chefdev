@@ -6,16 +6,13 @@ import { RecipeCollection } from "@pages/recipe-collection";
 import { MainLayout } from "@components/shared/layouts/main";
 
 function App() {
-
   return (
     <>
       <div>
         <MainLayout>
           <RecipeCollection />
         </MainLayout>
-        
       </div>
-
     </>
   );
 }

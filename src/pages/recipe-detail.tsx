@@ -1,8 +1,3 @@
 export function RecipeDetail() {
-
-    return (
-        <div>
-            Testing this is Recipe detail page
-        </div>
-    )
+  return <div>Testing this is Recipe detail page</div>;
 }
