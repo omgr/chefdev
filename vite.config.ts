@@ -12,6 +12,8 @@ export default defineConfig({
       "@services": path.resolve(__dirname, "./src/services"),
       "@pages": path.resolve(__dirname, "./src/pages"),
       "@data": path.resolve(__dirname, "./src/data"),
+      "@chefdev-types": path.resolve(__dirname, "./src/types"),
+      "@hooks": path.resolve(__dirname, "./src/hooks"),
     },
   },
 });

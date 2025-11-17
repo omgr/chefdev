@@ -3,10 +3,9 @@ import {
   CardBody,
   CardFooter,
 } from "@components/shared/ui-elements/card";
-// import { CardBody } from "@components/shared/ui-elements/card/card-body";
-// import { CardFooter } from "@components/shared/ui-elements/card/card-footer";
+import type { RecipeCardProps } from "@chedev-types/recipe/recipe-types";
 
-export function RecipeCard({ recipe }) {
+export function RecipeCard({ recipe }: RecipeCardProps) {
   return (
     <>
       <div className="max-w-sm rounded overflow-hidden shadow-lg bg-zinc-500 w-72 h-64 p-4">
@@ -16,6 +15,7 @@ export function RecipeCard({ recipe }) {
           prepTime={recipe.prepTime}
           cookTime={recipe.cookTime}
           servings={recipe.servings}
+          difficulty={recipe.difficulty}
         />
       </div>
     </>
