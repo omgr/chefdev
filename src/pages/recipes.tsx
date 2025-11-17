@@ -5,7 +5,6 @@ export function Recipes() {
     <div>
       <h3>Welcome to my recipes...!</h3>
       <Outlet />
-
     </div>
   );
 }

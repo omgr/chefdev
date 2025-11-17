@@ -1,7 +1,7 @@
 export function Header() {
-    return (
+  return (
     <div>
-        <p>Header</p>
+      <p>Header</p>
     </div>
-    )
-  }
+  );
+}
