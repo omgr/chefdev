@@ -1,7 +1,13 @@
 // Mock Recipe Data - Structure matches .NET API DTOs
 // This data will be replaced with API calls later
 
-import type { Recipe } from "@chedev-types/recipe/recipe-types";
+import type { Recipe } from "@chefdev-types/recipe/recipe-types";
+import pancakesImage from "@/assets/stack_of_pancakes.svg";
+import spaghettiImage from "@/assets/Spaghetti-and-Meatballs-v1.svg";
+import cookiesImage from "@/assets/1548612994.svg";
+import saladImage from "@/assets/food-big-salad.svg";
+import chickenStirFryImage from "@/assets/chicken-nuggets.svg";
+import bananaBreadImage from "@/assets/bread-and-banana02.svg";
 
 export const mockRecipes: Recipe[] = [
   {
@@ -64,7 +70,7 @@ export const mockRecipes: Recipe[] = [
       },
     ],
     tags: ["breakfast", "easy", "quick", "family-friendly", "vegetarian"],
-    imageUrl: null,
+    imageUrl: pancakesImage,
     createdAt: "2024-01-15T10:00:00Z",
     updatedAt: "2024-01-15T10:00:00Z",
   },
@@ -132,7 +138,7 @@ export const mockRecipes: Recipe[] = [
       },
     ],
     tags: ["dinner", "italian", "pasta", "medium"],
-    imageUrl: null,
+    imageUrl: spaghettiImage,
     createdAt: "2024-01-16T14:30:00Z",
     updatedAt: "2024-01-16T14:30:00Z",
   },
@@ -178,7 +184,7 @@ export const mockRecipes: Recipe[] = [
       },
     ],
     tags: ["dessert", "cookies", "chocolate", "easy", "baking"],
-    imageUrl: null,
+    imageUrl: cookiesImage,
     createdAt: "2024-01-17T16:00:00Z",
     updatedAt: "2024-01-17T16:00:00Z",
   },
@@ -226,7 +232,7 @@ export const mockRecipes: Recipe[] = [
       },
     ],
     tags: ["lunch", "salad", "greek", "healthy", "vegetarian", "quick"],
-    imageUrl: null,
+    imageUrl: saladImage,
     createdAt: "2024-01-18T12:00:00Z",
     updatedAt: "2024-01-18T12:00:00Z",
   },
@@ -290,7 +296,7 @@ export const mockRecipes: Recipe[] = [
       { step: 8, text: "Drizzle with sesame oil, serve over rice", time: 1 },
     ],
     tags: ["dinner", "chinese", "stir-fry", "quick", "healthy"],
-    imageUrl: null,
+    imageUrl: chickenStirFryImage,
     createdAt: "2024-01-19T18:30:00Z",
     updatedAt: "2024-01-19T18:30:00Z",
   },
@@ -357,7 +363,7 @@ export const mockRecipes: Recipe[] = [
       },
     ],
     tags: ["snack", "baking", "banana", "easy", "breakfast"],
-    imageUrl: null,
+    imageUrl: bananaBreadImage,
     createdAt: "2024-01-20T09:00:00Z",
     updatedAt: "2024-01-20T09:00:00Z",
   },
@@ -371,3 +377,4 @@ export function initializeMockData() {
     console.log("✅ Initialized with", mockRecipes.length, "sample recipes");
   }
 }
+

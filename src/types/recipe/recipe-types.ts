@@ -5,10 +5,18 @@ export interface Ingredient {
   note?: string;
 }
 
+export interface IngredientsProps {
+  ingredients: Ingredient[];
+}
+
 export interface Instruction {
   step: number;
   text: string;
   time?: number; // minutes
+}
+
+export interface InstructionsProps {
+  instructions: Instruction[];
 }
 
 export interface Recipe {
@@ -24,11 +32,22 @@ export interface Recipe {
   ingredients: Ingredient[];
   instructions: Instruction[];
   tags: string[];
-  imageUrl: string | null;
+  imageUrl: string | undefined;
   createdAt: string; // ISO string for .NET compatibility
   updatedAt: string;
 }
 
 export interface RecipeCardProps {
   recipe: Recipe;
+}
+
+export interface RecipeInfoProps {
+  title: Recipe["title"];
+  description: Recipe["description"];
+  difficulty: Recipe["difficulty"];
+  imageUrl: Recipe["imageUrl"];
+  prepTime: Recipe["prepTime"];
+  cookTime: Recipe["cookTime"];
+  servings: Recipe["servings"];
+  totalTime: number;
 }
