@@ -14,11 +14,11 @@ export function RecipeInfo({
     <>
       {imageUrl && (
         <div className="w-full h-64 mb-4 rounded-lg overflow-hidden">
-        <img
-          src={imageUrl}
-          alt={title}
-          className="w-full h-full object-contain"
-        />
+          <img
+            src={imageUrl}
+            alt={title}
+            className="w-full h-full object-contain"
+          />
         </div>
       )}
 

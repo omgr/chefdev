@@ -377,4 +377,3 @@ export function initializeMockData() {
     console.log("✅ Initialized with", mockRecipes.length, "sample recipes");
   }
 }
-
