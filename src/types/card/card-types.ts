@@ -1,5 +1,8 @@
 export interface CardHeaderProps {
   title: string;
+  needHeaderButtons: boolean;
+  headerButtonClick: (e: React.MouseEvent<HTMLButtonElement>) => void;
+  headerButtonText: string;
 }
 
 export interface CardBodyProps {

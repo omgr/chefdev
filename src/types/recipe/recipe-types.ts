@@ -39,6 +39,7 @@ export interface Recipe {
 
 export interface RecipeCardProps {
   recipe: Recipe;
+  handleOpenDialog: (id: string, title: string) => void;
 }
 
 export interface RecipeInfoProps {

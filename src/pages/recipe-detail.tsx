@@ -1,5 +1,5 @@
 import { useParams, Link } from "react-router-dom";
-import { mockRecipes } from "@data/mockRecipes";
+import { getRecipeById } from "@services/recipeService";
 import { useMemo } from "react";
 import type { Recipe } from "@chefdev-types/recipe/recipe-types";
 import { Instructions } from "@components/features/recipe/instructions";
@@ -8,7 +8,7 @@ import { RecipeInfo } from "@components/features/recipe/recipe-info";
 
 export function RecipeDetail() {
   const { id } = useParams();
-  const recipe: Recipe | undefined = mockRecipes.find((r) => r.id === id);
+  const recipe: Recipe | undefined = getRecipeById(id || "");
   const totalTime: number = useMemo(() => {
     if (!recipe) return 0;
     const total: number = recipe.instructions.reduce((acc, currentIns) => {
