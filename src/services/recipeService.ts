@@ -32,7 +32,7 @@ export const getRecipeById = (id: string): Recipe | undefined => {
  * Generates ID and timestamps automatically
  */
 export const createRecipe = (
-  recipeData: Omit<Recipe, "id" | "createdAt" | "updatedAt">
+  recipeData: Omit<Recipe, "id" | "createdAt" | "updatedAt">,
 ): Recipe => {
   const newRecipe: Recipe = {
     ...recipeData,
@@ -59,7 +59,7 @@ export const createRecipe = (
  */
 export const updateRecipe = (
   id: string,
-  recipeData: Omit<Recipe, "id" | "createdAt" | "updatedAt">
+  recipeData: Omit<Recipe, "id" | "createdAt" | "updatedAt">,
 ): Recipe | undefined => {
   const recipes = getAllRecipes();
   const index = recipes.findIndex((recipe) => recipe.id === id);

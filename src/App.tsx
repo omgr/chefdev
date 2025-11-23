@@ -1,13 +1,13 @@
 import { useEffect } from "react";
 import "./App.css";
 import { MainLayout } from "@components/shared/layouts/main-layout";
-import { initializeRecipes} from "@services/recipeService";
-import {mockRecipes} from "@data/mockRecipes";
+import { initializeRecipes } from "@services/recipeService";
+import { mockRecipes } from "@data/mockRecipes";
 
 function App() {
-  useEffect(()=>{
+  useEffect(() => {
     initializeRecipes(mockRecipes);
-  },[])
+  }, []);
 
   return (
     <>
