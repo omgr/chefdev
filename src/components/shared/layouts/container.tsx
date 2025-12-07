@@ -1,6 +1,7 @@
 import { RecipeCollection } from "@pages/recipe-collection";
 import { Recipes } from "@pages/recipes";
 import { RecipeDetail } from "@pages/recipe-detail";
+import { NewRecipe } from "@pages/new-recipe";
 import { Routes, Route, Navigate } from "react-router-dom";
 
 export function Container() {
@@ -12,6 +13,7 @@ export function Container() {
           <Route index element={<Navigate to="view-all" replace />} />
           <Route path="view-all" element={<RecipeCollection />} />
           <Route path="view-detail/:id" element={<RecipeDetail />} />
+          <Route path="new" element={<NewRecipe />} />
         </Route>
       </Routes>
     </div>

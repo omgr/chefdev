@@ -1,10 +1,14 @@
+import { useState, useMemo, useCallback } from "react";
+import { useNavigate } from "react-router-dom";
+
 import { RecipeCard } from "@components/features/recipe/recipe-card";
+import { SearchBar } from "@components/shared/ui-elements/filters/search-bar";
+import { ChefDevPrompt } from "@components/shared/ui-elements/prompt/chef-dev-prompt";
+
 import { getAllRecipes, deleteRecipe } from "@services/recipeService";
 import type { Recipe } from "@chefdev-types/recipe/recipe-types";
-import { useState, useMemo, useCallback } from "react";
-import { SearchBar } from "@components/shared/ui-elements/filters/search-bar";
 import { useDebounce } from "@hooks/filter-hooks";
-import { ChefDevPrompt } from "@components/shared/ui-elements/prompt/chef-dev-prompt";
+
 export function RecipeCollection() {
   const [searchTerm, setSearchTerm] = useState("");
   // setRecipes will be used for CRUD operations (delete, add, edit)
@@ -14,20 +18,28 @@ export function RecipeCollection() {
   const [dialogId, setDialogId] = useState("");
   const DIALOG_DESCRIPTION = "Are you sure you want to delete it?";
 
+  const navigate = useNavigate();
+
+  const handleNewRecipe = () => {
+    navigate("/recipes/new", {
+      replace: true,
+    });
+  };
+
   const setDialogValues = useCallback(
     (id: string, title: string, open: boolean) => {
       setDialogTitle(`Deleting - ${title}...?`);
       setDialogId(id);
       setOpenDialog(open);
     },
-    [],
+    []
   );
 
   const handleOpenDialog = useCallback(
     (id: string, title: string) => {
       setDialogValues(id, title, true);
     },
-    [setDialogValues],
+    [setDialogValues]
   );
 
   const handleCloseDialog = useCallback(() => {
@@ -53,7 +65,10 @@ export function RecipeCollection() {
 
   return (
     <>
-      <SearchBar onSearch={setSearchTerm} />
+      <div className="flex justify-between items-center gap-3">
+        <SearchBar onSearch={setSearchTerm} />
+        <button onClick={handleNewRecipe}>New Recipe</button>
+      </div>
       <div className="grid grid-cols-3 xs:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 mt-4">
         {filteredRecipes.map((recipe: Recipe) => (
           <RecipeCard
