@@ -16,7 +16,6 @@ export const config = defineConfig({
       "@hooks": path.resolve(__dirname, "./src/hooks"),
     },
   },
-
 });
 
-export default config ;
+export default config;

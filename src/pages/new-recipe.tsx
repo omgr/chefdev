@@ -36,7 +36,7 @@ export function NewRecipe() {
     cookTime,
     servings,
     ingredients,
-    instructions
+    instructions,
   );
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {

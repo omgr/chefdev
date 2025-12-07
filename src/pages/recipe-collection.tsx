@@ -32,14 +32,14 @@ export function RecipeCollection() {
       setDialogId(id);
       setOpenDialog(open);
     },
-    []
+    [],
   );
 
   const handleOpenDialog = useCallback(
     (id: string, title: string) => {
       setDialogValues(id, title, true);
     },
-    [setDialogValues]
+    [setDialogValues],
   );
 
   const handleCloseDialog = useCallback(() => {

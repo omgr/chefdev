@@ -16,10 +16,10 @@ export function ChefDevDropdown<T>({
   onChange,
   error,
 }: ChefDevDropdownProps<T>) {
-//   const defaultOption: ChefDevDropdownOption<T> = { value: "" as T, label: "Select an option" };
-//   const [selectedValue, setSelectedValue] = useState<ChefDevDropdownOption<T>>(
-//     selectedOption || defaultOption
-//   );
+  //   const defaultOption: ChefDevDropdownOption<T> = { value: "" as T, label: "Select an option" };
+  //   const [selectedValue, setSelectedValue] = useState<ChefDevDropdownOption<T>>(
+  //     selectedOption || defaultOption
+  //   );
   console.log(value);
   return (
     <>
@@ -28,7 +28,9 @@ export function ChefDevDropdown<T>({
           {label}
         </label>
         <Listbox name={label} value={value} onChange={onChange}>
-          <ListboxButton className="flex-auto p-1">{value?.label}</ListboxButton>
+          <ListboxButton className="flex-auto p-1">
+            {value?.label}
+          </ListboxButton>
           <ListboxOptions anchor="bottom" className="w-(--button-width)">
             {options.map((option) => (
               <ListboxOption
@@ -36,8 +38,10 @@ export function ChefDevDropdown<T>({
                 value={option}
                 as={Fragment}
               >
-                {({ focus,selected }) => (
-                  <div className={clsx("flex gap-2", focus && "cursor-pointer")}>
+                {({ focus, selected }) => (
+                  <div
+                    className={clsx("flex gap-2", focus && "cursor-pointer")}
+                  >
                     <CheckIcon
                       className={clsx("size-5", !selected && "invisible")}
                     />
